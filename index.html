@@ -3,68 +3,45 @@
 <head>
     <title>&#128148; Valentine's Excuse Generator &#128148;</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
-
         body { 
-            font-family: 'Luckiest Guy', cursive; 
+            font-family: 'Comic Sans MS', cursive, sans-serif; 
             text-align: center; 
             margin-top: 50px; 
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
-            color: white;
-            overflow: hidden;
+            background-color: #ffebf0;
         }
         .excuse-box { 
-            font-size: 26px; 
-            color: #d60000; 
+            font-size: 24px; 
+            color: red; 
             font-weight: bold; 
             margin-top: 20px; 
             padding: 20px; 
             background: white; 
             display: inline-block; 
             border-radius: 10px;
-            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-            animation: pop 0.5s ease-in-out;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
         }
         button { 
-            padding: 15px 35px; 
-            font-size: 22px; 
-            background: #ff1744; 
+            padding: 15px 30px; 
+            font-size: 20px; 
+            background: red; 
             color: white; 
             border: none; 
-            border-radius: 30px; 
+            border-radius: 5px; 
             cursor: pointer; 
             margin-top: 20px;
             transition: 0.3s;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
         }
         button:hover {
-            background: #d60000;
-            transform: scale(1.1);
+            background: darkred;
         }
         .header {
-            font-size: 42px;
-            color: #fff;
+            font-size: 36px;
+            color: darkred;
             font-weight: bold;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
         }
         .subtext {
-            font-size: 22px;
-            color: #ffebf0;
-        }
-        @keyframes pop {
-            0% { transform: scale(0.8); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-        .heart {
-            position: absolute;
-            font-size: 24px;
-            animation: float 3s infinite;
-            opacity: 0.8;
-        }
-        @keyframes float {
-            0% { transform: translateY(0); opacity: 0.8; }
-            50% { transform: translateY(-30px); opacity: 1; }
-            100% { transform: translateY(-60px); opacity: 0; }
+            font-size: 20px;
+            color: #d60000;
         }
     </style>
 </head>
@@ -91,22 +68,6 @@
             ];
             let randomExcuse = excuses[Math.floor(Math.random() * excuses.length)];
             document.getElementById("excuse").innerHTML = randomExcuse;
-
-            generateFloatingHeart();
-        }
-
-        function generateFloatingHeart() {
-            let heart = document.createElement("div");
-            heart.innerHTML = "❤️";
-            heart.classList.add("heart");
-            heart.style.left = Math.random() * window.innerWidth + "px";
-            heart.style.top = "100%";
-            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
-            document.body.appendChild(heart);
-
-            setTimeout(() => {
-                heart.remove();
-            }, 3000);
         }
     </script>
 </body>
