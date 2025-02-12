@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valentine's Excuse Generator 💔</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: pink; }
+        .excuse-box { font-size: 20px; color: red; font-weight: bold; margin-top: 20px; }
+        button { padding: 10px 20px; font-size: 18px; background: red; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>💔 Valentine's Excuse Generator 💔</h1>
+    <p>Need a last-minute excuse to escape Valentine's Day plans? Click below! 😆</p>
+    <button onclick="generateExcuse()">Give Me an Excuse!</button>
+    <div class="excuse-box" id="excuse"></div>
+
+    <script>
+        function generateExcuse() {
+            let excuses = [
+                "My WiFi is down, so I can’t text back… forever.",
+                "I just realized I’m allergic to love… doctor’s orders!",
+                "I have a work meeting… at 9 PM on Valentine’s Day.",
+                "My dog scheduled a dinner date with me. Priorities!",
+                "I accidentally booked a flight to another country… oops!",
+                "My horoscope says I should avoid romance today.",
+                "I’m still recovering from last year’s heartbreak."
+            ];
+            let randomExcuse = excuses[Math.floor(Math.random() * excuses.length)];
+            document.getElementById("excuse").innerText = randomExcuse;
+        }
+    </script>
+</body>
+</html>
