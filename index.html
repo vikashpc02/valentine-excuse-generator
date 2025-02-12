@@ -1,32 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Valentine's Excuse Generator </title>
+    <title>&#128148; Valentine's Excuse Generator &#128148;</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: pink; }
-        .excuse-box { font-size: 20px; color: red; font-weight: bold; margin-top: 20px; }
-        button { padding: 10px 20px; font-size: 18px; background: red; color: white; border: none; cursor: pointer; }
+        body { 
+            font-family: 'Comic Sans MS', cursive, sans-serif; 
+            text-align: center; 
+            margin-top: 50px; 
+            background-color: #ffebf0;
+        }
+        .excuse-box { 
+            font-size: 24px; 
+            color: red; 
+            font-weight: bold; 
+            margin-top: 20px; 
+            padding: 20px; 
+            background: white; 
+            display: inline-block; 
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        }
+        button { 
+            padding: 15px 30px; 
+            font-size: 20px; 
+            background: red; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: darkred;
+        }
+        .header {
+            font-size: 36px;
+            color: darkred;
+            font-weight: bold;
+        }
+        .subtext {
+            font-size: 20px;
+            color: #d60000;
+        }
     </style>
 </head>
 <body>
-    <h1>Valentine's Excuse Generator </h1>
-    <p>Need a last-minute excuse to escape Valentine's Day plans? Click below! </p>
-    <button onclick="generateExcuse()">Give Me an Excuse!</button>
-    <div class="excuse-box" id="excuse"></div>
+    <h1 class="header">&#128150; Valentine's Excuse Generator &#128150;</h1>
+    <p class="subtext">Need a last-minute excuse to escape Valentine's Day plans? &#128514; Click below! &#128071;</p>
+    
+    <button onclick="generateExcuse()">&#128148; Give Me an Excuse! &#128148;</button>
+    <div class="excuse-box" id="excuse">&#129315; Click the button to generate an excuse!</div>
 
     <script>
         function generateExcuse() {
             let excuses = [
-                "My WiFi is down, so I can’t text back… forever.",
-                "I just realized I’m allergic to love… doctor’s orders!",
-                "I have a work meeting… at 9 PM on Valentine’s Day.",
-                "My dog scheduled a dinner date with me. Priorities!",
-                "I accidentally booked a flight to another country… oops!",
-                "My horoscope says I should avoid romance today.",
-                "I’m still recovering from last year’s heartbreak."
+                "&#128246; My WiFi is down, so I can’t text back… forever. &#128557;",
+                "&#129319; I just realized I’m allergic to love… doctor's orders! &#129398;",
+                "&#128197; I have a work meeting… at 9 PM on Valentine’s Day. &#129760;",
+                "&#128054; My dog scheduled a dinner date with me. Priorities! &#128062;",
+                "&#9992;&#65039; I accidentally booked a flight to another country… oops! &#129322;",
+                "&#128302; My horoscope says I should avoid romance today. &#127775;",
+                "&#128148; I’m still recovering from last year’s heartbreak… send food. &#127829;",
+                "&#129315; My imaginary girlfriend just broke up with me. I need time to heal. &#128557;",
+                "&#129398; My heart is colder than the Arctic… let's reschedule for summer. &#10052;&#65039;",
+                "&#128657; I tripped over my own feelings and need medical attention. &#127973;"
             ];
             let randomExcuse = excuses[Math.floor(Math.random() * excuses.length)];
-            document.getElementById("excuse").innerText = randomExcuse;
+            document.getElementById("excuse").innerHTML = randomExcuse;
         }
     </script>
 </body>
